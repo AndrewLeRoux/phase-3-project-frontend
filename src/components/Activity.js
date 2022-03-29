@@ -4,7 +4,13 @@ function Activity({activity, user, onAddFavorite}){
 
 
     function handleClick(){
-        fetch("http://localhost:9292/favorites", {
+        console.log(user.favorites)
+        console.log(activity.id)
+        if (user.favorites.find(favorite => favorite.activity_id == activity.id)) {
+            console.log("already in favorites")
+         }
+        else {
+            fetch("http://localhost:9292/favorites", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -16,6 +22,8 @@ function Activity({activity, user, onAddFavorite}){
         })
         .then((r) => r.json())
         .then((newFavorite) => onAddFavorite(newFavorite));
+        }
+        
     }
 
     return(

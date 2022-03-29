@@ -50,6 +50,7 @@ function App() {
   }
 
   function handleAddFavorite(newFavorite){
+    
     const updatedFavorites = [...favorites, newFavorite]
     setFavorites(updatedFavorites)
   }
