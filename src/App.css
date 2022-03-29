@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.card {
+  margin: 16px;
+  border-style: solid outset;
+  border-color: green;
+  background-color: rgb(151, 21, 21);
+  color: white;
+  width: 50%
+  
+}
+
+.card img {
+  width: 25%;
+}
