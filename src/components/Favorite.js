@@ -13,6 +13,7 @@ function Favorite({favorite, onDelete}){
     return(
         <div className="card">
             <p>{favorite.activity.name}</p>
+            <p>{favorite.activity.activity_type}</p>
             <button onClick={handleClick}>remove from favorites</button>
         </div>
         

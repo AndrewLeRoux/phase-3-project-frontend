@@ -14,7 +14,6 @@ const linkStyles = {
 
 function NavBar({handleClick}) {
 
-
     return (
       <div>
         <NavLink

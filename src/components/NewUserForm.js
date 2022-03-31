@@ -4,24 +4,29 @@ function NewUserForm({onAddUser}){
 
 
     const [formData, setFormData] = useState({
-        "name": "",
-        "preferences": ""
+        name: "",
+        education: false,
+        recreational: false,
+        social: false,
+        diy: false,
+        charity: false,
+        cooking: false,
+        relaxation: false,
+        music: false,
+        busywork: false
     })
 
 
 
     function handleChange(e){
         const name = e.target.name
-        const value = e.target.value
+        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
   
         setFormData({
           ...formData,
           [name]: value 
         })
     }
-
-
-
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -37,8 +42,6 @@ function NewUserForm({onAddUser}){
         .then((newUser) => {
             onAddUser(newUser)
         });
-
-
     }
 
     return(
@@ -53,13 +56,96 @@ function NewUserForm({onAddUser}){
             value={formData.name}
         />
         <br/>
+        <h2>Activity Preferences</h2>
+        <label>
+        Education
         <input
-            type="text"
-            name = "preferences"
-            placeholder="Preferences..."
+            type="checkbox"
+            name = "education"
             onChange={handleChange}
-            value={formData.preferences}
+            value={formData.education}
         />
+        </label>
+        <br/>
+        <label>
+        Recreational
+        <input
+            type="checkbox"
+            name = "recreational"
+            onChange={handleChange}
+            value={formData.recreational}
+        />
+        </label>
+        <br/>
+        <label>
+        Social
+        <input
+            type="checkbox"
+            name = "social"
+            onChange={handleChange}
+            value={formData.social}
+        />
+        </label>
+        <br/>
+        <label>
+        DIY
+        <input
+            type="checkbox"
+            name = "diy"
+            onChange={handleChange}
+            value={formData.diy}
+        />
+        </label>
+        <br/>
+        <label>
+        Charity
+        <input
+            type="checkbox"
+            name = "charity"
+            onChange={handleChange}
+            value={formData.charity}
+        />
+        </label>
+        <br/>
+        <label>
+        Cooking
+        <input
+            type="checkbox"
+            name = "cooking"
+            onChange={handleChange}
+            value={formData.cooking}
+        />
+        </label>
+        <br/>
+        <label>
+        Relaxation
+        <input
+            type="checkbox"
+            name = "relaxation"
+            onChange={handleChange}
+            value={formData.relaxation}
+        />
+        </label>
+        <br/>
+        <label>
+        Music
+        <input
+            type="checkbox"
+            name = "music"
+            onChange={handleChange}
+            value={formData.music}
+        />
+        </label>
+        <br/>
+        <label>
+        Busywork
+        <input
+            type="checkbox"
+            name = "busywork"
+            onChange={handleChange}
+            value={formData.busywork}
+        />
+        </label>
         <br/>
         <button type="submit">Create Profile</button>
         </form>

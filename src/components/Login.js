@@ -20,6 +20,7 @@ return(
     <h2>Login</h2>
     <form onSubmit = {handleLogin}>
         <select onChange = {e => setName(e.target.value)}>
+        <option value = "" hidden>Select a User...</option>
             {usersList}
         </select>
         <br/>

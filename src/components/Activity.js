@@ -1,13 +1,11 @@
 import React from "react";
 
-function Activity({activity, user, onAddFavorite}){
+function Activity({activity, user, onAddFavorite, favorites}){
 
 
     function handleClick(){
-        console.log(user.favorites)
-        console.log(activity.id)
-        if (user.favorites.find(favorite => favorite.activity_id == activity.id)) {
-            console.log("already in favorites")
+        if (favorites.find(favorite => favorite.activity_id == activity.id && favorite.user_id == user.id)) {
+            alert("already in favorites")
          }
         else {
             fetch("http://localhost:9292/favorites", {
@@ -29,6 +27,7 @@ function Activity({activity, user, onAddFavorite}){
     return(
         <div className="card">
             <p>{activity.name}</p>
+            <p>{activity.activity_type}</p>
             <button onClick={handleClick}>add to favorites</button>
         </div>
         

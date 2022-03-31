@@ -65,13 +65,13 @@ function App() {
       { currentUser? <NavBar handleClick={handleLogout}/> : null}
       <Switch>
         <Route exact path="/profile">
-        <Profile user = {currentUser}/>
+        <Profile activities = {activities} user = {currentUser} favorites ={favorites} onAddFavorite={handleAddFavorite}/>
         </Route>
         <Route exact path="/favorites">
         {currentUser? <Favorites user = {currentUser} favorites ={favorites} onDelete={handleDelete}/> : null}
         </Route>
         <Route exact path="/activities">
-          <Activities activities = {activities} user = {currentUser} onAddFavorite={handleAddFavorite}/>
+          <Activities activities = {activities} user = {currentUser} favorites ={favorites} onAddFavorite={handleAddFavorite}/>
         </Route>
         <Route exact path="/">
         {currentUser? <Home user = {currentUser} activities = {activities}/> : <Login users = {users} onLogin = {handleLogin} onAddUser = {handleAddUser}/>}

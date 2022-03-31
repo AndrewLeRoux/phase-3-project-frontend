@@ -1,11 +1,43 @@
 import React from "react";
+import Activity from "./Activity";
 
-function Profile({user}){
+function Profile({user, activities, favorites, onAddFavorite}){
+
+    const activityTypes = ['education','recreational','social','diy','charity','cooking','relaxation','music','busywork']
+    const activityList = activityTypes.filter(activity => user[activity])
+
+    const filteredActivities = activities.filter(activity => {
+        for (const type of activityList){
+            if (type == activity.activity_type)
+                return true
+        }
+    })
+
+    function random_item(items){
+    return items[Math.floor(Math.random()*items.length)];
+    }
+    const recommended = filteredActivities.map((activity) =>{ return <Activity user = {user} key = {activity.name} activity = {activity} favorites ={favorites} onAddFavorite={onAddFavorite}/>})
+    console.log(filteredActivities)
+    const items = []
+    
+    for (let i = 0; i < 4; i++){
+        const item = random_item(recommended)
+        if (!items.includes(item)){
+            items.push(item)
+        }
+    }
 
     return(
         <div>
-            <p>{user.name}</p>
-            <p>{user.preferences}</p>
+            <h1>My Profile</h1>
+            <p>User: {user.name}</p>
+            <p>Activity Preferences:</p>
+            <ul>
+                {activityList.map(activity => {return <li key = {activity}>{activity}</li>})}
+            </ul>
+            <h2>Recommended Activities</h2>
+            {items}
+            
         </div>
         
     )
