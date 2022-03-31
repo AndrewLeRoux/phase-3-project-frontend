@@ -15,8 +15,9 @@ function Login({users, onAddUser, onLogin}){
         onLogin(name)
     }
 return(
-<div>
-    <h1>Activity Planner</h1>
+<div className = "login">
+    <h1 id = "loginTitle">Activity Planner</h1>
+    <img src ="https://www.hhmglobal.com/wp-content/uploads/news/29784/Exersize-696x393.jpg" alt="running" width="464" height="262"></img>
     <h2>Login</h2>
     <form onSubmit = {handleLogin}>
         <select onChange = {e => setName(e.target.value)}>
@@ -24,7 +25,7 @@ return(
             {usersList}
         </select>
         <br/>
-        <button type="submit">Login</button>
+        <button className="loginButton" type="submit">Login</button>
     </form>
     <NewUserForm onAddUser = {onAddUser}/>
 </div>

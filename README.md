@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Sonne_Meer_und_M%C3%B6we.jpg/400px-Sonne_Meer_und_M%C3%B6we.jpg
+## relaxation
+
+https://www.habitatbroward.org/wp-content/uploads/2020/01/10-Benefits-Showing-Why-Education-Is-Important-to-Our-Society.jpg
+## education
+
+"https://www.hhmglobal.com/wp-content/uploads/news/29784/Exersize-696x393.jpg" 
+## recreational
+
+https://publir.com/blog/wp-content/uploads/2021/09/Social_media.jpg
+## social
+
+https://www.moneycrashers.com/wp-content/uploads/2018/11/diy-do-it-yourself-wooden-block-letters.jpg
+## diy
+
+https://www.usnews.com/dims4/USNEWS/9b62b7c/2147483647/crop/2000x1313%2B0%2B4/resize/640x420/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fa9%2Fe8%2F046d240745f590f48c4d6067a9f5%2F200923-stock.jpg
+## charity
+
+https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg
+## cooking
+
+https://media.istockphoto.com/vectors/music-note-icon-vector-illustration-vector-id1175435360?k=20&m=1175435360&s=612x612&w=0&h=1yoTgUwobvdFlNxUQtB7_NnWOUD83XOMZHvxUzkOJJs=
+## music
+
+https://thumbs.dreamstime.com/b/multitasking-vector-illustration-flat-tiny-busy-work-list-persons-concept-job-management-overload-lifestyle-abstract-time-pressure-144407520.jpg
+## busywork

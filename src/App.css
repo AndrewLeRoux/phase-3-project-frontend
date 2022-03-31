@@ -1,10 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  font-family: Georgia, serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,10 +19,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -39,15 +30,149 @@
 
 
 .card {
+  color: white;
+  font-size: 16px;
+  margin: 16px;
+  margin-left: 0; 
+  margin-right: auto;
+  text-align: left;
+}
+
+.cardContainer{
+  
+  border-style: solid outset;
+  border-color: blue;
+  background-color: #61dafb;
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.cardImg{
+  margin-left: auto; 
+  margin-right: 0;
+}
+
+
+.profileCard{
   margin: 16px;
   border-style: solid outset;
-  border-color: green;
-  background-color: rgb(151, 21, 21);
+  border-color: blue;
+  background-color: #61dafb;
   color: white;
-  width: 50%
-  
+  width: 50%;
+  margin: 0 auto;
+  text-align: center
+}
+
+.profile{
+  margin: 0 auto;
 }
 
 .card img {
   width: 25%;
+}
+
+#loginTitle {
+  text-align: center;
+  color: #61dafb;
+  font-size: 28px;
+}
+
+.login {
+  text-align: center;
+  color: #61dafb;
+  
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginButton {
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.titles{
+  text-decoration: underline;
+}
+
+h1{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px
+}
+
+h2{
+  text-decoration: underline;
+  color: #61dafb;
+  text-align: center
+}
+
+#favoriteHeader{
+  text-decoration: underline;
+  color: #61dafb;
+  text-align: center;
+  font-size: 28px;
+}
+
+.form{
+  color: blue;
+}
+
+#preferences{
+  color: #61dafb;
+  text-decoration: underline;
+}
+
+.homepage{
+  color: blue;
+  text-align: center;
+  padding: 50px 200px;
+  font-size: 20px;
+}
+
+
+.button {
+  background-color: #61dafb;
+  border-style: solid outset;
+  border-color: blue;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.activities{
+  color: #61dafb;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.activityButton{
+  background-color: blue;
+  border-style: solid outset;
+  border-color: rgb(0, 0, 92);
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.activityName{
+  text-decoration: underline;
 }

@@ -61,7 +61,7 @@ function App() {
   }
   
   return (
-    <div>
+    <div className = "app">
       { currentUser? <NavBar handleClick={handleLogout}/> : null}
       <Switch>
         <Route exact path="/profile">

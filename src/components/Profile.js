@@ -17,7 +17,6 @@ function Profile({user, activities, favorites, onAddFavorite}){
     return items[Math.floor(Math.random()*items.length)];
     }
     const recommended = filteredActivities.map((activity) =>{ return <Activity user = {user} key = {activity.name} activity = {activity} favorites ={favorites} onAddFavorite={onAddFavorite}/>})
-    console.log(filteredActivities)
     const items = []
     
     for (let i = 0; i < 4; i++){
@@ -28,16 +27,17 @@ function Profile({user, activities, favorites, onAddFavorite}){
     }
 
     return(
-        <div>
-            <h1>My Profile</h1>
-            <p>User: {user.name}</p>
-            <p>Activity Preferences:</p>
-            <ul>
-                {activityList.map(activity => {return <li key = {activity}>{activity}</li>})}
-            </ul>
+        <div className = "profile">
+            <div className = "profileCard">
+                <h1>My Profile</h1>
+                <p>User: {user.name}</p>
+                <p>Activity Preferences:</p>
+                <ul>
+                    {activityList.map(activity => {return <li key = {activity}>{activity}</li>})}
+                </ul>
+            </div>
             <h2>Recommended Activities</h2>
             {items}
-            
         </div>
         
     )

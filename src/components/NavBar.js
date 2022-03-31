@@ -16,12 +16,15 @@ function NavBar({handleClick}) {
 
     return (
       <div>
+        <h1 id = "login">Activity Planner</h1>
+        <div className = "navbar">
+        <br></br>
         <NavLink
           to="/"
           exact
           style={linkStyles}
           activeStyle={{
-            background: "green"
+            background: "#61dafb"
           }}
         >
           Home
@@ -31,7 +34,7 @@ function NavBar({handleClick}) {
           exact
           style={linkStyles}
           activeStyle={{
-            background: "green"
+            background: "#61dafb"
           }}
         >
           Profile
@@ -41,7 +44,7 @@ function NavBar({handleClick}) {
           exact
           style={linkStyles}
           activeStyle={{
-            background: "green",
+            background: "#61dafb"
           }}
         >
           Activities
@@ -51,7 +54,7 @@ function NavBar({handleClick}) {
           exact
           style={linkStyles}
           activeStyle={{
-            background: "green",
+            background: "#61dafb"
           }}
         >
           Favorites
@@ -64,6 +67,7 @@ function NavBar({handleClick}) {
         >
           Logout
         </NavLink>
+        </div>
       </div>
     );
 }

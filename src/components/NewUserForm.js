@@ -46,7 +46,7 @@ function NewUserForm({onAddUser}){
 
     return(
         <div className = "form-container">
-        <h1>Create new User</h1>
+        <h2 className = "titles">Create new User</h2>
         <form className = "form" onSubmit={handleSubmit}>
         <input
             type="text"
@@ -56,7 +56,7 @@ function NewUserForm({onAddUser}){
             value={formData.name}
         />
         <br/>
-        <h2>Activity Preferences</h2>
+        <h3 id= "preferences">Activity Preferences</h3>
         <label>
         Education
         <input
@@ -147,7 +147,7 @@ function NewUserForm({onAddUser}){
         />
         </label>
         <br/>
-        <button type="submit">Create Profile</button>
+        <button className="loginButton" type="submit">Create Profile</button>
         </form>
     </div>
     )
