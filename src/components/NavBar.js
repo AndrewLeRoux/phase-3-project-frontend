@@ -16,7 +16,7 @@ function NavBar({handleClick}) {
 
     return (
       <div>
-        <h1 id = "login">Activity Planner</h1>
+        <h1 id = "loginTitle">Activity Planner</h1>
         <div className = "navbar">
         <br></br>
         <NavLink

@@ -3,8 +3,6 @@ import Activity from "./Activity";
 
 function Profile({user, activities, favorites, onAddFavorite}){
 
-    console.log(activities)
-    console.log(favorites)
     const activityTypes = ['education','recreational','social','diy','charity','cooking','relaxation','music','busywork']
     const favoriteIds = favorites.map(favorite => {return favorite.activity_id})
     

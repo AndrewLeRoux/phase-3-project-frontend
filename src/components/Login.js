@@ -27,7 +27,7 @@ return(
         <br/>
         <button className="loginButton" type="submit">Login</button>
     </form>
-    <NewUserForm onAddUser = {onAddUser}/>
+    <NewUserForm onAddUser = {onAddUser} users={users}/>
 </div>
 )
 }

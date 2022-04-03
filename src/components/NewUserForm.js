@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 
-function NewUserForm({onAddUser}){
-
+function NewUserForm({onAddUser, users}){
 
     const [formData, setFormData] = useState({
         name: "",
@@ -16,8 +15,6 @@ function NewUserForm({onAddUser}){
         busywork: false
     })
 
-
-
     function handleChange(e){
         const name = e.target.name
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
@@ -30,20 +27,24 @@ function NewUserForm({onAddUser}){
 
     function handleSubmit(e) {
         e.preventDefault();
-    
-        fetch("http://localhost:9292/users",{
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        })
-        .then((r) => r.json())
-        .then((newUser) => {
-            onAddUser(newUser)
-        });
-    }
 
+        if(users.find(user => user.name == formData.name)){
+            alert("this user already exisits")
+        }
+        else{
+            fetch("http://localhost:9292/users",{
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              })
+              .then((r) => r.json())
+              .then((newUser) => {
+                  onAddUser(newUser)
+              });
+        }
+    }
     return(
         <div className = "form-container">
         <h2 className = "titles">Create new User</h2>
