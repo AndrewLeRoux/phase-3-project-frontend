@@ -3,12 +3,16 @@ import Activity from "./Activity";
 
 function Profile({user, activities, favorites, onAddFavorite}){
 
+    console.log(activities)
+    console.log(favorites)
     const activityTypes = ['education','recreational','social','diy','charity','cooking','relaxation','music','busywork']
+    const favoriteIds = favorites.map(favorite => {return favorite.activity_id})
+    
     const activityList = activityTypes.filter(activity => user[activity])
 
     const filteredActivities = activities.filter(activity => {
         for (const type of activityList){
-            if (type == activity.activity_type)
+            if (type == activity.activity_type && !favoriteIds.includes(activity.id))
                 return true
         }
     })
@@ -29,10 +33,10 @@ function Profile({user, activities, favorites, onAddFavorite}){
     return(
         <div className = "profile">
             <div className = "profileCard">
-                <h1>My Profile</h1>
+                <h1 id = "myProfile">My Profile</h1>
                 <p>User: {user.name}</p>
                 <p>Activity Preferences:</p>
-                <ul>
+                <ul id = "activityPreferences">
                     {activityList.map(activity => {return <li key = {activity}>{activity}</li>})}
                 </ul>
             </div>

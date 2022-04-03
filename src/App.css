@@ -62,7 +62,11 @@
   color: white;
   width: 50%;
   margin: 0 auto;
-  text-align: center
+  text-align: left;
+}
+#myProfile{
+  text-align: left;
+  
 }
 
 .profile{
